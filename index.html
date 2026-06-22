@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>WhatsApp Chat</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="phone">
+
+<div class="top">
+<div class="profile">
+👤 Charan
+<span>online</span>
+</div>
+</div>
+
+
+<div id="messages" class="messages">
+
+<div class="msg received">
+Hi 👋
+</div>
+
+<div class="msg sent">
+Hello 😊
+</div>
+
+</div>
+
+
+<div class="bottom">
+
+<input id="text" placeholder="Type a message">
+
+<button onclick="send()">➤</button>
+
+</div>
+
+
+</div>
+
+
+
+<script>
+
+function send(){
+
+let msg=document.getElementById("text").value;
+
+if(msg!=""){
+
+document.getElementById("messages").innerHTML +=
+`<div class="msg sent">${msg}</div>`;
+
+
+setTimeout(()=>{
+
+document.getElementById("messages").innerHTML +=
+`<div class="msg received">Ok 👍</div>`;
+
+},1000);
+
+
+document.getElementById("text").value="";
+
+}
+
+}
+
+</script>
+
+
+</body>
+</html>
